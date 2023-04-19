@@ -9,3 +9,6 @@
 --      ('Learn to code', false),
 --      ('Build projects', false),
 --      ('Get a job', false);
+
+insert into "album" ("name")
+values ('My Album');
