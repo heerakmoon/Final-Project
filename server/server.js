@@ -2,6 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import errorMiddleware from './lib/error-middleware.js';
 import pg from 'pg';
+// import ClientError from './lib/client-error.js';
 
 // eslint-disable-next-line no-unused-vars -- Remove when used
 const db = new pg.Pool({
@@ -24,6 +25,15 @@ app.use(express.json());
 
 app.get('/api/hello', (req, res) => {
   res.json({ message: 'Hello World!' });
+});
+
+app.post('api/album', async (req, res, next) => {
+  // try {
+  //   const {name, description} = req.body;
+  //   if (name === '') {
+  //     throw new ClientError()
+  //   }
+  // }
 });
 
 app.use(errorMiddleware);
