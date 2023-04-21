@@ -1,6 +1,7 @@
 // import { useEffect, useState } from 'react';
 import './App.css';
-import NewAlbum from './NewAlbum';
+import NewAlbum from './components/NewAlbum';
+import AddButton from './components/AddButton';
 
 function App() {
   // const [serverData, setServerData] = useState("");
@@ -30,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <NewAlbum />
+      <AddButton buttonName='New Album' />
     </div>
   );
 }
