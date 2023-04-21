@@ -31,7 +31,7 @@ app.post('/api/album', async (req, res, next) => {
   try {
     const { name, description } = req.body;
     const sql = `
-      insert into album ("name", "description)
+      insert into album ("name", "description")
       values ($1, $2)
       returning *
       `;

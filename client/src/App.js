@@ -1,29 +1,35 @@
-import { useEffect, useState } from 'react';
-import logo from './logo.svg';
+// import { useEffect, useState } from 'react';
 import './App.css';
+import NewAlbum from './NewAlbum';
 
 function App() {
-  const [serverData, setServerData] = useState("");
+  // const [serverData, setServerData] = useState("");
+  // const [albumData, setAlbumData] = useState({ name: '', description: ''});
 
-  useEffect(() => {
-    async function getServerData() {
-      const resp = await fetch('/api/hello');
-      const data = await resp.json();
+  // async function createAlbum() {
+  //   try{
+  //     const res = await fetch('/api/album', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify(albumData)
+  //     });
+  //     if (!res.ok) {
+  //       throw new Error('Failed to create new album');
+  //     }
 
-      console.log('Data from server:', data);
-
-      setServerData(data.message);
-    }
-
-    getServerData();
-  }, []);
+  //     const data = await res.json();
+  //     console.log('Album created:', data);
+  //     setAlbumData({ name: '', description:''});
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // }
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>{serverData}</h1>
-      </header>
+      <NewAlbum />
     </div>
   );
 }
