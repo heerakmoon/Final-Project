@@ -20,9 +20,9 @@ create schema "public";
 CREATE TABLE "public"."photo" (
 	"photoId" serial NOT NULL,
 	"albumId" serial NOT NULL,
-	"title" TEXT NOT NULL,
-	"caption" TEXT NOT NULL,
-	"notes" TEXT NOT NULL,
+	"title" TEXT,
+	"caption" TEXT,
+	"notes" TEXT,
 	"image" TEXT NOT NULL,
 	CONSTRAINT "photo_pk" PRIMARY KEY ("photoId")
 ) WITH (
