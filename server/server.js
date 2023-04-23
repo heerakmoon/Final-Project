@@ -27,9 +27,22 @@ app.get('/api/hello', (req, res) => {
   res.json({ message: 'Hello World!' });
 });
 
-// app.get('/api/albums', async (req, res, next) => {
-
-// });
+app.get('/api/albums', async (req, res, next) => {
+  try {
+    const sql = `
+      select *
+      from albums
+    `;
+    const { rows } = await db.query(sql);
+    if (rows.length > 0) {
+      res.json(rows);
+    } else {
+      res.status(404).json({ message: 'No albums found' });
+    }
+  } catch (err) {
+    next(err);
+  }
+});
 
 app.post('/api/albums', async (req, res, next) => {
   try {
