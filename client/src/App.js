@@ -2,6 +2,7 @@
 import './App.css';
 import NewAlbum from './components/NewAlbum';
 import AddButton from './components/AddButton';
+import Navbar from './components/NavBar';
 
 function App() {
   // const [serverData, setServerData] = useState("");
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <NewAlbum />
       <AddButton buttonName='New Album' />
     </div>
