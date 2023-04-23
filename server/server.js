@@ -27,11 +27,15 @@ app.get('/api/hello', (req, res) => {
   res.json({ message: 'Hello World!' });
 });
 
-app.post('/api/album', async (req, res, next) => {
+// app.get('/api/albums', async (req, res, next) => {
+
+// });
+
+app.post('/api/albums', async (req, res, next) => {
   try {
     const { name, description } = req.body;
     const sql = `
-      insert into album ("name", "description")
+      insert into albums ("name", "description")
       values ($1, $2)
       returning *
       `;

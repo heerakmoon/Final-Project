@@ -6,7 +6,7 @@ drop schema "public" cascade;
 
 create schema "public";
 
- CREATE TABLE "public"."album" (
+ CREATE TABLE "public"."albums" (
 	"albumId" serial NOT NULL,
 	"name" TEXT NOT NULL,
 	"description" TEXT,
