@@ -44,6 +44,25 @@ app.get('/api/albums', async (req, res, next) => {
   }
 });
 
+// app.get('/api/albums/:albumId/photos', async (req, res, next) => {
+//   try {
+//     const sql = `
+//     select *
+//     from photos
+//     where albumId = $1
+//     `;
+//     const { albumId } = req.params;
+//     const { rows } = await db.query(sql, [albumId]);
+//     if (rows.length > 0) {
+//       res.json(rows);
+//     } else {
+//       res.status(404).json({ message: 'No photos found for this album' });
+//     }
+//   } catch (err) {
+//     next(err);
+//   }
+// });
+
 app.post('/api/albums', async (req, res, next) => {
   try {
     const { name, description } = req.body;
