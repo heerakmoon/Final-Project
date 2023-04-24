@@ -32,8 +32,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <NewAlbum />
-      <AddButton buttonName='New Album' />
+      <div className="width-without-nav">
+        <NewAlbum />
+        <AddButton buttonName='New Album' />
+      </div>
     </div>
   );
 }

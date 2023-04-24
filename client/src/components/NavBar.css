@@ -1,7 +1,8 @@
 .fixed {
   position: fixed;
   left: 0;
-  padding: 0 20px;
+  width: 150px;
+  padding: 10px 20px;
   text-align: left;
   border-right: 1px solid gray;
   height: 100vh;

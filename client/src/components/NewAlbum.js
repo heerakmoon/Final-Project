@@ -1,3 +1,4 @@
+import './NewAlbum.css';
 // import { useState } from 'react';
 
 export default function NewAlbum() {
