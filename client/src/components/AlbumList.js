@@ -19,14 +19,14 @@ export default function AlbumList() {
     getAlbums();
   }, []);
 
-  // if () {
-  //   return (
-  //     <>
-  //       <h4>No Albums</h4>
-  //       <p>Create a new album</p>
-  //     </>
-  //   )
-  // }
+  if (albums.length === 0) {
+    return (
+      <>
+        <h4>No Albums</h4>
+        <p>Create a new album</p>
+      </>
+    )
+  }
 
   return (
     <>

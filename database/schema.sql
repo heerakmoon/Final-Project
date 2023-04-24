@@ -28,8 +28,3 @@ CREATE TABLE "public"."photo" (
 ) WITH (
   OIDS=FALSE
 );
-
-
-
-
--- ALTER TABLE "photo" ADD CONSTRAINT "photo_fk0" FOREIGN KEY ("albumId") REFERENCES "album"("albumId");
