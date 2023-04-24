@@ -1,10 +1,9 @@
 import './App.css';
 import NewAlbum from './components/NewAlbum';
-import AddButton from './components/AddButton';
 import Navbar from './components/NavBar';
-import AlbumList from './components/AlbumList';
+import Albums from './pages/Albums';
 // import { useEffect, useState } from 'react';
-// import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   // const [serverData, setServerData] = useState("");
@@ -35,9 +34,10 @@ function App() {
     <div className="App">
       <Navbar />
       <div className="width-without-nav">
-        <AddButton buttonName='New Album' />
-        <AlbumList />
-        <NewAlbum />
+        <Routes>
+          <Route path='/api/albums' element={<Albums />} />
+          <Route path='/api/albums/new' element={<NewAlbum />} />
+        </Routes>
       </div>
     </div>
   );

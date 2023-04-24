@@ -17,7 +17,7 @@ export default function NewAlbum() {
           Description
           <textarea name="description" value="" placeholder="Description...(optional)" />
         </label>
-        <Button textColor='white' bgColor='rgb(134,175,237)' text='Create Album' />
+        <Button textColor='white' bgColor='rgb(134,175,237)' text='Create Album' url='/api/albums' />
       </form>
     </>
   )
