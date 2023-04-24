@@ -4,6 +4,7 @@ export default function ButtonWText({ textColor, bgColor, text }) {
     color: textColor,
     backgroundColor: bgColor,
     border: 'none',
+    padding: '5px 12px',
     cursor: 'pointer',
   }
 

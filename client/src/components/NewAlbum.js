@@ -1,4 +1,5 @@
 import './NewAlbum.css';
+import ButtonWText from './ButtonWText';
 // import { useState } from 'react';
 
 export default function NewAlbum() {
@@ -15,6 +16,7 @@ export default function NewAlbum() {
           Description
           <textarea name="description" value="" placeholder="Description...(optional)" />
         </label>
+        <ButtonWText textColor='white' bgColor='rgb(134,175,237)' text='Create Album' />
       </form>
     </>
   )
