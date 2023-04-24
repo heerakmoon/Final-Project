@@ -1,8 +1,9 @@
-// import { useEffect, useState } from 'react';
 import './App.css';
 import NewAlbum from './components/NewAlbum';
 import AddButton from './components/AddButton';
 import Navbar from './components/NavBar';
+import AlbumList from './components/AlbumList';
+// import { useEffect, useState } from 'react';
 // import { Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
       <Navbar />
       <div className="width-without-nav">
         <AddButton buttonName='New Album' />
+        <AlbumList />
         <NewAlbum />
       </div>
     </div>
