@@ -63,7 +63,7 @@ app.get('/api/albums', async (req, res, next) => {
 //   }
 // });
 
-app.post('/api/albums', async (req, res, next) => {
+app.post('/api/albums/new', async (req, res, next) => {
   try {
     const { name, description } = req.body;
     const sql = `
