@@ -1,5 +1,5 @@
 
-export default function ButtonWText({ textColor, bgColor, text }) {
+export default function Button({ textColor, bgColor, text }) {
   const buttonStyle = {
     color: textColor,
     backgroundColor: bgColor,

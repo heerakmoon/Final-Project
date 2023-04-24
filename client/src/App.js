@@ -34,8 +34,8 @@ function App() {
     <div className="App">
       <Navbar />
       <div className="width-without-nav">
-        <NewAlbum />
         <AddButton buttonName='New Album' />
+        <NewAlbum />
       </div>
     </div>
   );
