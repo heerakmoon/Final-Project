@@ -12,8 +12,8 @@ function App() {
       <Navbar />
       <div className="width-without-nav">
         <Routes>
-          <Route path='/api/albums' element={<Albums />} />
-          <Route path='/api/albums/new' element={<NewAlbum />} />
+          <Route path='/albums' element={<Albums />} />
+          <Route path='/albums/new' element={<NewAlbum />} />
         </Routes>
       </div>
     </div>

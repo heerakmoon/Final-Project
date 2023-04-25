@@ -6,8 +6,8 @@ export default function Albums() {
 
   return (
     <>
-      <Link to="/api/albums/new">
-        <AddButton buttonName='New Album' url='/api/albums' />
+      <Link to="/albums/new">
+        <AddButton buttonName='New Album' url='/albums' />
       </Link>
       <AlbumList />
     </>

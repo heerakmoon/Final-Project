@@ -28,17 +28,14 @@ app.get('/api/hello', (req, res) => {
 });
 
 app.get('/api/albums', async (req, res, next) => {
+  console.log('getting');
   try {
     const sql = `
       select *
       from albums
     `;
     const { rows } = await db.query(sql);
-    if (rows.length > 0) {
-      res.json(rows);
-    } else {
-      res.status(404).json({ message: 'No albums found' });
-    }
+    res.json(rows);
   } catch (err) {
     next(err);
   }
@@ -64,6 +61,7 @@ app.get('/api/albums', async (req, res, next) => {
 // });
 
 app.post('/api/albums/new', async (req, res, next) => {
+  console.log('create', req.body);
   try {
     const { name, description } = req.body;
     const sql = `

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 
 export default function Button({ textColor, bgColor, text, url }) {
   const buttonStyle = {
@@ -12,9 +11,7 @@ export default function Button({ textColor, bgColor, text, url }) {
   return (
     <>
       <button style={buttonStyle}>
-        <Link to={url}>
-          {text}
-        </Link>
+        {text}
       </button>
     </>
   )

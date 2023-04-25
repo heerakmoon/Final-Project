@@ -5,10 +5,10 @@ export default function NavBar() {
   return (
     <>
       <div className='fixed'>
-        <Link to="/">
+        <Link to="">
           <h2>AppName</h2>
         </Link>
-        <Link to="/api/albums">
+        <Link to="/albums">
           <h3>Albums</h3>
         </Link>
       </div>
