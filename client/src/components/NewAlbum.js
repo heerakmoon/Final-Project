@@ -46,7 +46,7 @@ export default function NewAlbum() {
       <form onSubmit={handleSubmit}>
         <label>
           Name
-          <input type='text' name='name' value={albumName} onChange={handleAlbumName} placeholder="Album name" />
+          <input type='text' name='name' value={albumName} onChange={handleAlbumName} placeholder="Album name" required />
         </label>
         <label>
           Description
