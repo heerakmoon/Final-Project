@@ -1,11 +1,16 @@
 import './NavBar.css';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
   return (
     <>
       <div className='fixed'>
-        <h2>AppName</h2>
-        <h3>Albums</h3>
+        <Link to="/">
+          <h2>AppName</h2>
+        </Link>
+        <Link to="/api/albums">
+          <h3>Albums</h3>
+        </Link>
       </div>
     </>
   )
