@@ -8,7 +8,7 @@ export default function NewAlbum() {
   const [description, setDescription] = useState('');
   const navigate = useNavigate();
 
-  console.log(albumName);
+  // console.log(albumName);
 
   function handleAlbumName(event) {
     setAlbumName(event.target.value);
@@ -19,16 +19,15 @@ export default function NewAlbum() {
   }
 
   async function handleSubmit(event) {
-    console.log('fetch');
+    // console.log('fetch');
     event.preventDefault();
-    const newAlbum = { name: albumName, description};
     try {
       const res = await fetch('/api/albums/new', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(newAlbum)
+        body: JSON.stringify({ name: albumName, description })
       });
       if (!res.ok) {
         throw new Error('Failed to create new album');

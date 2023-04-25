@@ -28,7 +28,7 @@ app.get('/api/hello', (req, res) => {
 });
 
 app.get('/api/albums', async (req, res, next) => {
-  console.log('getting');
+  // console.log('getting');
   try {
     const sql = `
       select *
