@@ -19,7 +19,7 @@ create schema "public";
 
 CREATE TABLE "public"."photo" (
 	"photoId" serial NOT NULL,
-	"albumId" serial NOT NULL,
+	"albumId" int NOT NULL,
 	"title" TEXT,
 	"caption" TEXT,
 	"notes" TEXT,
@@ -28,3 +28,5 @@ CREATE TABLE "public"."photo" (
 ) WITH (
   OIDS=FALSE
 );
+
+ALTER TABLE "photo" ADD CONSTRAINT "photo_fk0" FOREIGN KEY ("albumId") REFERENCES "albums"("albumId");
