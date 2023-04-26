@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './AlbumList.css';
 
 export default function AlbumList() {
   const [albums, setAlbums] = useState([]);
@@ -33,9 +34,10 @@ export default function AlbumList() {
       <ul style={{ listStyleType: 'none' }}>
         {albums.map((album) => {
           return (
-            <li key={album.albumId}>
+            <div className=''>
+              <li key={album.albumId}></li>
               <p>{album.name}</p>
-            </li>
+            </div>
           )
         })}
       </ul>
