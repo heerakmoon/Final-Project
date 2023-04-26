@@ -3,6 +3,7 @@
 }
 
 .width-without-nav {
-  width: calc(100% - 150px);
-  margin-left: 150px;
+  width: calc(100% - 191px);
+  margin-left: 191px;
+  margin-right: 0;
 }
