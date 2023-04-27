@@ -17,7 +17,7 @@ create schema "public";
 
 
 
-CREATE TABLE "public"."photo" (
+CREATE TABLE "public"."photos" (
 	"photoId" serial NOT NULL,
 	"albumId" int NOT NULL,
 	"title" TEXT,
@@ -29,4 +29,4 @@ CREATE TABLE "public"."photo" (
   OIDS=FALSE
 );
 
-ALTER TABLE "photo" ADD CONSTRAINT "photo_fk0" FOREIGN KEY ("albumId") REFERENCES "albums"("albumId");
+ALTER TABLE "photos" ADD CONSTRAINT "photo_fk0" FOREIGN KEY ("albumId") REFERENCES "albums"("albumId");
