@@ -34,7 +34,7 @@ export default function AlbumList() {
       <ul style={{ listStyleType: 'none' }}>
         {albums.map((album) => {
           return (
-            <div className=''>
+            <div>
               <li key={album.albumId}></li>
               <p>{album.name}</p>
             </div>
