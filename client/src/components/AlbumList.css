@@ -2,5 +2,9 @@ li {
   height: 200px;
   border: 1px solid red;
   border-radius: 8px;
-  margin: 75px 100px 0;
+  margin: 75px 150px 0;
+}
+
+ul {
+  padding: 0;
 }
