@@ -8,8 +8,6 @@ export default function NewAlbum() {
   const [description, setDescription] = useState('');
   const navigate = useNavigate();
 
-  // console.log(albumName);
-
   function handleAlbumName(event) {
     setAlbumName(event.target.value);
   }
@@ -19,7 +17,6 @@ export default function NewAlbum() {
   }
 
   async function handleSubmit(event) {
-    // console.log('fetch');
     event.preventDefault();
     try {
       const res = await fetch('/api/albums/new', {
