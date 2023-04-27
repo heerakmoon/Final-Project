@@ -5,6 +5,10 @@ li {
   margin: 75px 150px 0;
 }
 
+li:hover {
+  cursor: pointer;
+}
+
 ul {
   padding: 0;
 }
