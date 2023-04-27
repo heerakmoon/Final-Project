@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+form {
+  max-width: 700px;
+  margin: 30px auto 0;
+
+}
+
+label,
+input,
+textarea {
+  width: 100%;
+}
+
+input,
+textarea {
+  padding: 10px 10px;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  margin-top: 15px;
+}
+
+textarea {
+  min-height: 300px;
+}
+
+div {
+  margin-bottom: 50px;
+}
+
+label {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.newAlb {
+  margin: 0;
+  padding: 15px;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
