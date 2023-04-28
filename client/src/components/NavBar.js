@@ -11,6 +11,8 @@ export default function NavBar() {
         <Link to="/albums">
           <h2>Albums</h2>
         </Link>
+        <h3>Add Photos</h3>
+        <h3>Title & Notes</h3>
       </div>
     </>
   )

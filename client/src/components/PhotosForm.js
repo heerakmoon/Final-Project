@@ -19,7 +19,7 @@ export default function PhotosForm() {
       }
       const data = await res.json();
       console.log('Added to photos:', data);
-      navigate('/albums/:albumId/photos')
+      navigate(`/albums/${albumId}/photos`)
     } catch(err) {
       console.error(err);
     }
