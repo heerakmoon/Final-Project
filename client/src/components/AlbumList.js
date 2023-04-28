@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
 import './AlbumList.css';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function AlbumList() {
@@ -43,7 +43,7 @@ export default function AlbumList() {
         {albums.map((album) => {
           return (
             <div onClick={handleClick}>
-              <li id={album.albumId}></li>
+              <li key={album.albumId} id={album.albumId}></li>
               <p>{album.name}</p>
             </div>
           )
