@@ -34,7 +34,7 @@ export default function AlbumList() {
     return (
       <>
         <h4>No Albums</h4>
-        <p>Create a new album</p>
+        <h4>Create a new album</h4>
       </>
     )
   }
