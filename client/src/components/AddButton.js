@@ -7,7 +7,7 @@ export default function AddButton({buttonName, url}) {
         <button style={{cursor: 'pointer', fontSize: '25px'}}>
           +
         </button>
-        <h4>{buttonName}</h4>
+        <h3>{buttonName}</h3>
       </div>
     </>
   )

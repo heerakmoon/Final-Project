@@ -8,8 +8,6 @@ export default function NewAlbum() {
   const [description, setDescription] = useState('');
   const navigate = useNavigate();
 
-  // console.log(albumName);
-
   function handleAlbumName(event) {
     setAlbumName(event.target.value);
   }
@@ -19,7 +17,6 @@ export default function NewAlbum() {
   }
 
   async function handleSubmit(event) {
-    // console.log('fetch');
     event.preventDefault();
     try {
       const res = await fetch('/api/albums/new', {
@@ -42,17 +39,23 @@ export default function NewAlbum() {
 
   return (
     <>
-      <h1>New Album</h1>
+      <h1 className='newAlb'>New Album</h1>
       <form onSubmit={handleSubmit}>
-        <label>
-          Name
-          <input type='text' name='name' value={albumName} onChange={handleAlbumName} placeholder="Album name" required />
-        </label>
-        <label>
-          Description
-          <textarea name='description' value={description} onChange={handleDescription} placeholder="Description...(optional)" />
-        </label>
-        <Button textColor='white' bgColor='rgb(134,175,237)' text='Create Album' />
+        <div className='align-left'>
+          <label>
+            Name
+            <input type='text' name='name' value={albumName} onChange={handleAlbumName} placeholder="Album name" required />
+          </label>
+        </div>
+        <div className='align-left'>
+          <label>
+            Description
+            <textarea name='description' value={description} onChange={handleDescription} placeholder="Description...(optional)" />
+          </label>
+        </div>
+        <div className='align-right'>
+          <Button textColor='white' bgColor='rgb(134,175,237)' text='Create Album' />
+        </div>
       </form>
     </>
   )

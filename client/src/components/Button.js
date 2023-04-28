@@ -3,9 +3,11 @@ export default function Button({ textColor, bgColor, text, url }) {
   const buttonStyle = {
     color: textColor,
     backgroundColor: bgColor,
+    fontSize: 'large',
     border: 'none',
-    padding: '5px 12px',
+    padding: '10px 15px',
     cursor: 'pointer',
+    textAlign: 'right',
   }
 
   return (

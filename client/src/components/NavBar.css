@@ -6,9 +6,10 @@ a {
 .fixed {
   position: fixed;
   left: 0;
-  width: 150px;
+  width: 175px;
   padding: 10px 20px;
   text-align: left;
   border-right: 1px solid gray;
   height: 100vh;
+  font-family: 'Glory', sans-serif;
 }

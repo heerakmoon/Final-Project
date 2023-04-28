@@ -1,8 +1,11 @@
-import { useState, useEffect } from 'react';
 import './AlbumList.css';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function AlbumList() {
   const [albums, setAlbums] = useState([]);
+  const [albumId, setAlbumId] = useState();
+  const navigate = useNavigate()
 
   useEffect(()=> {
     async function getAlbums() {
@@ -20,6 +23,13 @@ export default function AlbumList() {
     getAlbums();
   }, []);
 
+  function handleClick(event) {
+    if (event.target.tagName === 'LI') {
+      setAlbumId(event.target.id);
+      navigate(`/albums/${event.target.id}/photos`);
+    }
+  }
+
   if (albums.length === 0) {
     return (
       <>
@@ -34,8 +44,10 @@ export default function AlbumList() {
       <ul style={{ listStyleType: 'none' }}>
         {albums.map((album) => {
           return (
-            <div className=''>
-              <li key={album.albumId}></li>
+            <div onClick={handleClick}>
+              <li key={albumId} id={album.albumId} className='photoAlbum'>
+                <div className='whiteSquare'></div>
+              </li>
               <p>{album.name}</p>
             </div>
           )

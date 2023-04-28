@@ -1,3 +1,18 @@
+h3 {
+  margin: 12px 0 12px 10px;
+  font-family: 'Glory', sans-serif;
+}
+
+button {
+  background-color: rgb(134, 175, 237);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0 10px;
+}
+
 .addButton {
   display: flex;
+  padding-top: 35px;
+  margin-left: 100px;
 }
