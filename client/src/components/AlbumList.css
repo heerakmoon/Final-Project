@@ -1,8 +1,8 @@
 li {
-  height: 200px;
-  border: 1px solid red;
+  width: 250px;
+  height: 300px;
   border-radius: 8px;
-  margin: 75px 150px 0;
+  margin: 50px 75px 0;
 }
 
 li:hover {
@@ -10,5 +10,31 @@ li:hover {
 }
 
 ul {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
   padding: 0;
+  margin: 0 75px;
+}
+
+p {
+  width: 250px;
+  margin: 15px 75px;
+  font-family: 'Kalam', cursive;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.photoAlbum {
+  background-color: rgb(159, 197, 255);
+  padding: 30px 0;
+  border-radius: 0 7px 7px 0;
+}
+
+.whiteSquare {
+  margin: 0 auto;
+  border-radius: 5px;
+  width: 75%;
+  height: 50px;
+  background-color: white;
 }
