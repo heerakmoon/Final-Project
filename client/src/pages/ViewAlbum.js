@@ -1,13 +1,15 @@
 import AddButton from "../components/AddButton";
 import { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
 
 export default function ViewAlbum() {
   const [photos, setPhotos] = useState([])
+  const { albumId } = useParams();
 
   useEffect(() => {
     async function getPhotos() {
       try {
-        const res = await fetch('/api/albums/:albumId/photos');
+        const res = await fetch(`/api/albums/${albumId}/photos`);
         if (!res.ok) {
           throw new Error('Failed to find photos');
         }
@@ -18,7 +20,7 @@ export default function ViewAlbum() {
       }
     }
     getPhotos();
-  }, [])
+  }, [albumId])
 
   const emptyAlbumMsg = 'This album is empty :(';
 

@@ -24,7 +24,7 @@ export default function AlbumList() {
 
   function handleClick(event) {
     if (event.target) {
-      navigate(`albums/${event.target.id}/photos`);
+      navigate(`/albums/${event.target.id}/photos`);
     }
   }
 
