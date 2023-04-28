@@ -6,7 +6,7 @@ export default function NavBar() {
     <>
       <div className='fixed'>
         <Link to="">
-          <h1>AppName</h1>
+          <h1>MemoryBox</h1>
         </Link>
         <Link to="/albums">
           <h2>Albums</h2>
